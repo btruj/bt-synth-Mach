@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BT Synth Machine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script>
+      function play(str) {
+
+        if (str === "q" || str === "Q") {
+        document.getElementById('display').innerText = "Synth1";
+           } else if (str === "w" || str === "W") {
+            document.getElementById('display').innerText = "Synth2";
+           } else if (str === "e" || str === "E") {
+            document.getElementById('display').innerText = "Synth3";
+           } else if (str === "a" || str === "A") {
+            document.getElementById('display').innerText = "Synth4";
+           } else if (str === "s" || str === "S") {
+            document.getElementById('display').innerText = "Synth5";
+           } else if (str === "d" || str === "D") {
+            document.getElementById('display').innerText = "Synth6";
+           } else if (str === "z" || str === "Z") {
+            document.getElementById('display').innerText = "Synth7";
+           } else if (str === "x" || str === "X") {
+            document.getElementById('display').innerText = "Synth8";
+           } else if (str === "c" || str === "C") {
+            document.getElementById('display').innerText = "Synth9";
+           }
+
+           var audio = document.getElementById(str);
+        audio.play();
+          }
+          window.document.onkeyup = function (event) {
+            let keystroke = event.key
+            if (keystroke === "q" || keystroke === "Q") {
+              play("Q");
+            } else if (keystroke === "w" || keystroke === "W") {
+              play("W");
+            } else if (keystroke === "e" || keystroke === "E") {
+              play("E");
+            } else if (keystroke === "a" || keystroke === "A") {
+              play("A");
+            } else if (keystroke === "s" || keystroke === "S") {
+              play("S");
+            } else if (keystroke === "d" || keystroke === "D") {
+              play("D");
+            } else if (keystroke === "z" || keystroke === "Z") {
+              play("Z");
+            } else if (keystroke === "x" || keystroke === "X") {
+              play("X");
+            } else if (keystroke === "c" || keystroke === "C") {
+              play("C");
+            }
+          }
+    </script>
+    </head>
+    <body>
+      <div class="container" id="drum-machine">
+        <h1 class="text-center">BT Synth Machine</h1>
+      <div class="card my-3">
+        <div class="card-body">
+        <div id="display" class="text-center">TYPE or CLICK letter on keyboard to play!</div>
+       </div></div>
+
+    <button class="drum-pad btn btn-primary btn-block" id="drum-0" onclick="play('Q')">Q <audio src="./clip/Synth1.m4a" class="clip" id="Q"></button>
+    <button class="drum-pad btn btn-block btn-primary" id="drum-1" onclick="play('W')">W <audio src="./clip/Synth2.m4a" class="clip" id="W"></button>
+    <button class="drum-pad btn btn-block btn-primary" id="drum-2" onclick="play('E')">E <audio src="./clip/Synth3.m4a" class="clip" id="E"></button>
+    <button class="drum-pad btn btn-block btn-primary" id="drum-3" onclick="play('A')">A <audio src="./clip/Synth4.m4a" class="clip" id="A"></button>
+    <button class="drum-pad btn btn-block btn-primary" id="drum-4" onclick="play('S')">S <audio src="./clip/Synth5.m4a" class="clip" id="S"></button>
+    <button class="drum-pad btn btn-block btn-primary" id="drum-5" onclick="play('D')">D <audio src="./clip/Synth6.m4a" class="clip" id="D"></button>
+    <button class="drum-pad btn btn-block btn-primary" id="drum-6" onclick="play('Z')">Z <audio src="./clip/Synth7.m4a" class="clip" id="Z"></button>
+    <button class="drum-pad btn btn-block btn-primary" id="drum-7" onclick="play('X')">X <audio src="./clip/Synth8.m4a" class="clip" id="X"></button>
+    <button class="drum-pad btn btn-block btn-primary" id="drum-8" onclick="play('C')">C <audio src="./clip/Synth9.m4a" class="clip" id="C"></button>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
